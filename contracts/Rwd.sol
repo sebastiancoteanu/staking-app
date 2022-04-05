@@ -5,9 +5,9 @@ pragma solidity ^0.8.0;
 ** totalSupply - 1 million tokens
 */
 
-contract Tether {
-    string public name = 'Tether';
-    string public symbol = 'USDT';
+contract Rwd {
+    string public name = 'Reward Token';
+    string public symbol = 'RWD';
     uint256 public totalSupply = 1000000000000000000000000;
     uint8 public decimals = 18;
 

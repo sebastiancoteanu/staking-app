@@ -37,8 +37,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "generate-types": "typechain --target=truffle-v5 './build/contracts/*.json'",
-    "postinstall": "truffle compile && yarn generate-types",
-    "migrate": "tsc -p ./tsconfig.migrate.json --outDir migrations && truffle migrate"
+    "postinstall": "truffle compile && npm run generate-types",
+    "migrate": "tsc -p ./tsconfig.migrate.json --outDir ./migrations && truffle migrate --reset"
   },
   "eslintConfig": {
     "extends": [

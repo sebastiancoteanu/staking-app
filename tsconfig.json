@@ -19,7 +19,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["node", "truffle-typings"]
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["@types/node", "@types/chai", "@types/mocha"],
   },
   "include": [
     "src",
