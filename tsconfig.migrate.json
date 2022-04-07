@@ -1,4 +1,14 @@
 {
 	"extends": "./tsconfig.json",
-    "include": ["./migrations/*.ts", "./types/truffle-contracts/**/*.ts"]
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2015",
+        "lib": ["es2017"],
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "inlineSourceMap": true,
+        "moduleResolution": "node"
+    },
+    "include": ["./migrations/*.ts", "./types/truffle-contracts/**/*.ts", "./test/*.ts"]
 }
