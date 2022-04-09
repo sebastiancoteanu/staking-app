@@ -1,5 +1,5 @@
 {
-	"extends": ["airbnb", "airbnb-typescript"],
+	"extends": ["airbnb", "airbnb-typescript", "prettier"],
 	"plugins": ["@typescript-eslint"],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -7,21 +7,22 @@
 	},
 	"rules": {
 		"import/no-unresolved": 0,
-		"import/extensions": [2,
+		"import/extensions": [
+			2,
 			"ignorePackages",
 			{
-			  "js": "never",
-			  "jsx": "never",
-			  "ts": "never",
-			  "tsx": "never"
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
 			}
 		],
-		"react/jsx-filename-extension": [1, {
-			"extensions": [
-				".jsx",
-				".tsx"
-			]
-		}],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".jsx", ".tsx"]
+			}
+		],
 		"react/function-component-definition": [
 			2,
 			{
@@ -29,20 +30,21 @@
 			}
 		],
 		"no-tabs": 0,
-			"react/prop-types": 0,
-			"react/jsx-indent": [2, "tab"],
-			"react/jsx-indent-props": [2, "tab"]
-		},
-		"env": {
-				"browser": true,
-				"node": true,
-				"jest": true
-		},
-		"settings": {
-			"import/resolver": {
-				"node": {
-					"extensions": [".js", ".jsx", ".ts", ".tsx"]
-				}
+		"indent": [2, "tab"],
+		"react/prop-types": 0,
+		"react/jsx-indent": [2, "tab"],
+		"react/jsx-indent-props": [2, "tab"]
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"jest": true
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
 			}
 		}
+	}
 }
