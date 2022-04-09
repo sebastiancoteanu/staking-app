@@ -1,0 +1,48 @@
+{
+	"extends": ["airbnb", "airbnb-typescript"],
+	"plugins": ["@typescript-eslint"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
+	"rules": {
+		"import/no-unresolved": 0,
+		"import/extensions": [2,
+			"ignorePackages",
+			{
+			  "js": "never",
+			  "jsx": "never",
+			  "ts": "never",
+			  "tsx": "never"
+			}
+		],
+		"react/jsx-filename-extension": [1, {
+			"extensions": [
+				".jsx",
+				".tsx"
+			]
+		}],
+		"react/function-component-definition": [
+			2,
+			{
+				"namedComponents": "arrow-function"
+			}
+		],
+		"no-tabs": 0,
+			"react/prop-types": 0,
+			"react/jsx-indent": [2, "tab"],
+			"react/jsx-indent-props": [2, "tab"]
+		},
+		"env": {
+				"browser": true,
+				"node": true,
+				"jest": true
+		},
+		"settings": {
+			"import/resolver": {
+				"node": {
+					"extensions": [".js", ".jsx", ".ts", ".tsx"]
+				}
+			}
+		}
+}
