@@ -6,6 +6,6 @@ const App = () => (
 	<div>
 		<Navigation />
 	</div>
-
+);
 
 export default App;
