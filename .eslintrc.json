@@ -1,5 +1,5 @@
 {
-	"extends": ["airbnb", "airbnb-typescript", "prettier"],
+	"extends": ["plugin:@typescript-eslint/recommended", "airbnb", "airbnb-typescript", "prettier"],
 	"plugins": ["@typescript-eslint"],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -7,6 +7,7 @@
 	},
 	"rules": {
 		"import/no-unresolved": 0,
+		"no-unused-vars": "warn",
 		"import/extensions": [
 			2,
 			"ignorePackages",
