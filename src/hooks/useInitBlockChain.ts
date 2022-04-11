@@ -28,9 +28,9 @@ const useInitBlockChain = (): ReturnData => {
 	const [tether, setTether] = useState<Contract | null>(null);
 	const [rwd, setRwd] = useState<Contract | null>(null);
 	const [decentralBank, setDecentralBank] = useState<Contract | null>(null);
-	const [tetherBalance, setTetherBalance] = useState('');
-	const [rwdBalance, setRwdBalance] = useState('');
-	const [stakingBalance, setStakingBalance] = useState('');
+	const [tetherBalance, setTetherBalance] = useState('0');
+	const [rwdBalance, setRwdBalance] = useState('0');
+	const [stakingBalance, setStakingBalance] = useState('0');
 
 	const detectCurrentProvider = async () => {
 		let provider;

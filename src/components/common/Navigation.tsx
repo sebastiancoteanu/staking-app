@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Header: FC<Props> = ({ walletAddress }) => (
-	<Navbar expand="lg" className="px-3">
+	<Navbar bg="light" variant="light" expand="lg" className="px-3">
 		<Container fluid>
 			<Navbar.Brand href="/">Staking Dapp</Navbar.Brand>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
