@@ -26,7 +26,7 @@ const Main: FC<Props> = ({ tetherBalance, rwdBalance, stakingBalance, decentralB
 					</thead>
 					<tbody>
 						<tr>
-							<td>{stakingBalance} TETHER</td>
+							<td>{stakingBalance} USDT</td>
 							<td>{rwdBalance} RWD</td>
 						</tr>
 					</tbody>

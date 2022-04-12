@@ -18,6 +18,12 @@ const ActionForm: FC<Props> = ({ tetherBalance, decentralBank, walletAddress, te
 
 	const input = useRef<HTMLInputElement>(null);
 
+	const rewardStakingAccount = async () => {
+		// HACK just to show how rewarding works
+		const owner = await ((decentralBank.methods as DecentralBankInstance['methods']).owner as any).call().call();
+		((decentralBank.methods as DecentralBankInstance['methods']).issueStakingReward() as any).call({ from: owner });
+	};
+
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const stakeTokens = async () => {
 		const amountToStake = input.current?.value;
@@ -42,6 +48,7 @@ const ActionForm: FC<Props> = ({ tetherBalance, decentralBank, walletAddress, te
 						setIsStaking(false);
 						// eslint-disable-next-line
 						(input.current as any).value = '';
+						rewardStakingAccount();
 					});
 			});
 	};
